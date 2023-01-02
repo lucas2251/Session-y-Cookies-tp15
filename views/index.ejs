@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <% if (locals.userLogin) { %>
+     <style>
+      :root{
+        --userColor : <%- locals.userLogin.color %>;
+      }
+    </style>
+    <% } %>
+  </head>
+  <% if (locals.userLogin) { %>
+   <body style="background-color: var(--userColor);" >
+  <% }else { %>
+  <body>
+  <% } %>
+  
+
+    <%- include('./partials/header') %>
+<div class="home">
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    
+    <% if (locals.userLogin) { %>
+      <h2>Hola <%= locals.userLogin.nombre %></h2>
+      <h2>El color seleccionado es: <%- locals.userLogin.color %></h2>
+      <h2>El Mail ingresado es: <%- locals.userLogin.email %></h2>
+      <h2>Tu edad es: <%= locals.userLogin.edad %></h2>
+    <% } %>
+  </div>
+  </body>
+</html>

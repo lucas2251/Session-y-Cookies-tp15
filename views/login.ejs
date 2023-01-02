@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body style="background-color: rosybrown;">
+    <%- include('./partials/header') %> 
+    <main>
+        <h1>registro</h1>
+        <form action="/users/login" method="post">
+            <div>
+                <label for="name">Ingrese su nombre</label>
+                <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
+                <% if (locals.errors && errors.name) { %>
+                    <small><%= errors.name.msg %></small>
+                <% } %>
+            </div>
+            <div>
+                <label for="email">Ingrese su email</label>
+                <input type="email" name="email" id="email" placeholder="Ingrese su email">
+                <% if (locals.errors && errors.email) { %>
+                    <small><%= errors.email.msg %></small>
+                <% } %>
+            </div>
+            <div>
+                <label for="pass">Contraseña</label>
+                <input type="password" name="pass" id="pass" placeholder="Ingresar una contraseña">
+                <% if (locals.errors && errors.pass) { %>
+                    <small><%= errors.pass.msg %></small>
+                <% } %>
+            </div>
+            <div>
+                <input class="recordarme" type="checkbox" name="recordarme" id="recordarme" value="recordarme">
+                <label for="recordarme">Recordar color</label>
+            </div>
+            <div>
+                <button type="submit">login</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

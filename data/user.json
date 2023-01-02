@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Lucas",
+        "email": "lucas@gmail.com",
+        "edad": "24",
+        "pass": "$2a$12$sqcuUusO/3ga..G0HcOM5.vJC/nHbUGvjZveHsDmQdgId9H.rgMgq",
+        "colors": "#800000",
+        "rol": "usuario"
+    },
+    {
+        "id": 2,
+        "name": "ignacio",
+        "email": "ignacio@gmail.com",
+        "edad": "30",
+        "pass": "$2a$12$fcDOjAc02ccECdyMA.kck.dsBR.m347BDybdOyqfxUEx9japM5/K2",
+        "colors": "#A52A2A",
+        "rol": "usuario"
+    },
+    {
+        "id": 3,
+        "name": "maria",
+        "email": "maria@gmail.com",
+        "edad": "45",
+        "pass": "$2a$12$PE.1p1jrdZtmt0k7iIvZ1.C5vxbAQrH1oVi38DFYEWSTrh/fOoQ52",
+        "colors": "pink",
+        "rol": "usuario"
+    }
+]
